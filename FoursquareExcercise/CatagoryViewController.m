@@ -56,7 +56,6 @@
         destinationController.catagoryID = @"4d4b7104d754a06370d81259";
         destinationController.navigationItem.title = @"Play";
 
-        
     }
 
 }

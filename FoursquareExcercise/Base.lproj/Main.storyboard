@@ -83,10 +83,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G1k-E2-7nn">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G1k-E2-7nn">
                                 <rect key="frame" x="150" y="150" width="300" height="300"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jiJ-en-j7s">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jiJ-en-j7s">
                                         <rect key="frame" x="52" y="65" width="43" height="30"/>
                                         <state key="normal" title="FOOD">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -94,14 +94,11 @@
                                         <variation key="heightClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="150" y="172" width="43" height="30"/>
                                         </variation>
-                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="60" y="67" width="43" height="30"/>
-                                        </variation>
                                         <connections>
                                             <segue destination="7bK-jq-Zjz" kind="show" identifier="showFood" id="KdK-Bd-Rnf"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yvu-ew-scx">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yvu-ew-scx">
                                         <rect key="frame" x="185" y="65" width="50" height="30"/>
                                         <state key="normal" title="HOTEL">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -109,29 +106,11 @@
                                         <variation key="heightClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="393" y="173" width="50" height="30"/>
                                         </variation>
-                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="201" y="67" width="50" height="30"/>
-                                        </variation>
                                         <connections>
                                             <segue destination="7bK-jq-Zjz" kind="show" identifier="showHotel" id="Atm-MP-10x"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QO2-3x-ODt">
-                                        <rect key="frame" x="34" y="200" width="79" height="30"/>
-                                        <state key="normal" title="SHOPPING">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <variation key="heightClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="134" y="302" width="79" height="30"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="42" y="284" width="79" height="30"/>
-                                        </variation>
-                                        <connections>
-                                            <segue destination="7bK-jq-Zjz" kind="show" identifier="showShopping" id="cte-OT-cL8"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2TW-Jx-lPa">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2TW-Jx-lPa">
                                         <rect key="frame" x="192" y="200" width="37" height="30"/>
                                         <state key="normal" title="PLAY">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -139,24 +118,69 @@
                                         <variation key="heightClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="394" y="303" width="37" height="30"/>
                                         </variation>
-                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="208" y="284" width="37" height="30"/>
-                                        </variation>
                                         <connections>
                                             <segue destination="7bK-jq-Zjz" kind="show" identifier="showPlay" id="nbG-An-0vV"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QO2-3x-ODt">
+                                        <rect key="frame" x="34" y="200" width="79" height="30"/>
+                                        <state key="normal" title="SHOPPING">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="heightClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="134" y="302" width="79" height="30"/>
+                                        </variation>
+                                        <connections>
+                                            <segue destination="7bK-jq-Zjz" kind="show" identifier="showShopping" id="cte-OT-cL8"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="50" y="150" width="300" height="300"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="37" y="181" width="326" height="437"/>
-                                </variation>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="78G-uY-S5a"/>
+                                    <constraint firstAttribute="bottom" secondItem="2TW-Jx-lPa" secondAttribute="bottom" constant="70" id="8OX-SA-rD9"/>
+                                    <constraint firstItem="jiJ-en-j7s" firstAttribute="leading" secondItem="G1k-E2-7nn" secondAttribute="leading" constant="52" id="FeD-eb-vUr"/>
+                                    <constraint firstAttribute="width" constant="300" id="GNE-6b-beX"/>
+                                    <constraint firstItem="Yvu-ew-scx" firstAttribute="top" secondItem="G1k-E2-7nn" secondAttribute="top" constant="65" id="HlH-e5-zKV"/>
+                                    <constraint firstItem="jiJ-en-j7s" firstAttribute="top" secondItem="G1k-E2-7nn" secondAttribute="top" constant="65" id="KDi-GC-WYa"/>
+                                    <constraint firstAttribute="trailing" secondItem="Yvu-ew-scx" secondAttribute="trailing" constant="65" id="L6z-Ii-JGu"/>
+                                    <constraint firstItem="QO2-3x-ODt" firstAttribute="leading" secondItem="G1k-E2-7nn" secondAttribute="leading" constant="34" id="TjB-pf-wgf"/>
+                                    <constraint firstAttribute="bottom" secondItem="QO2-3x-ODt" secondAttribute="bottom" constant="70" id="rEb-Aw-tcu"/>
+                                    <constraint firstAttribute="trailing" secondItem="2TW-Jx-lPa" secondAttribute="trailing" constant="71" id="wHk-m3-YyG"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="G1k-E2-7nn" secondAttribute="centerY" id="8NQ-Qg-kEs"/>
+                            <constraint firstAttribute="centerY" secondItem="G1k-E2-7nn" secondAttribute="centerY" id="Aab-yT-Up4"/>
+                            <constraint firstAttribute="centerY" secondItem="G1k-E2-7nn" secondAttribute="centerY" id="FGn-AM-40i"/>
+                            <constraint firstAttribute="centerY" secondItem="G1k-E2-7nn" secondAttribute="centerY" id="GMc-mx-Fb4"/>
+                            <constraint firstAttribute="centerX" secondItem="G1k-E2-7nn" secondAttribute="centerX" id="GbN-GY-mXQ"/>
+                            <constraint firstAttribute="centerX" secondItem="G1k-E2-7nn" secondAttribute="centerX" id="QbS-5u-P1p"/>
+                            <constraint firstAttribute="centerX" secondItem="G1k-E2-7nn" secondAttribute="centerX" id="WtB-r8-TGi"/>
+                            <constraint firstAttribute="centerX" secondItem="G1k-E2-7nn" secondAttribute="centerX" id="nIS-ls-wmn"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Aab-yT-Up4"/>
+                                <exclude reference="FGn-AM-40i"/>
+                                <exclude reference="GMc-mx-Fb4"/>
+                                <exclude reference="QbS-5u-P1p"/>
+                                <exclude reference="WtB-r8-TGi"/>
+                                <exclude reference="nIS-ls-wmn"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="Aab-yT-Up4"/>
+                                <include reference="FGn-AM-40i"/>
+                                <include reference="GMc-mx-Fb4"/>
+                                <include reference="QbS-5u-P1p"/>
+                                <include reference="WtB-r8-TGi"/>
+                                <include reference="nIS-ls-wmn"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="WgQ-wX-8SX"/>
                 </viewController>
