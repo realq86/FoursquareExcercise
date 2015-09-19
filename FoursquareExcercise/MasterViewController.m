@@ -8,10 +8,18 @@
 
 #import "MasterViewController.h"
 #import "DetailViewController.h"
-
-@interface MasterViewController ()
+#import <RestKit/RestKit.h>
+#import "Venue.h"
+#define kCLIENTID @"IAMG115USX1ZA52JFAQ2VWZQHC4FL532PPPN2PZRY4EJDTBJ"
+#define kCLIENTSECRET @"QYQSOIZG0KVAKVMS3O1LZGJ1A5JWGTM5YZYYKZOWKQ2A4MTM"
+@interface MasterViewController (){
+    NSString *latitude;
+    NSString *longitude;
+}
 
 @property NSMutableArray *objects;
+@property (nonatomic, strong) NSMutableArray *venues;
+@property (nonatomic, strong) CLLocationManager *locationManager;
 @end
 
 @implementation MasterViewController
@@ -26,12 +34,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    
+}
 
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
-    self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+- (void)viewWillAppear:(BOOL)animated{
+    
+    AppDelegate *appDelegate = (AppDelegate*) [[UIApplication sharedApplication] delegate];
+    
+    
+    self.locationManager = [appDelegate returnLocationManager];
+    [self setLatAndLon];
+    [self configureRestKit];
+    [self loadVenue];
+    NSLog(@"\n viewWillAppear latitude = %@, longitude = %@\n", latitude, longitude);
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,27 +55,77 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)insertNewObject:(id)sender {
-    if (!self.objects) {
-        self.objects = [[NSMutableArray alloc] init];
-    }
-    [self.objects insertObject:[NSDate date] atIndex:0];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+
+#pragma mark - Set Lat and Lon
+
+- (void) setLatAndLon {
+    
+    CLLocation *location = self.locationManager.location;
+    latitude = [[NSString alloc] initWithFormat:@"%g", location.coordinate.latitude];
+    longitude = [[NSString alloc] initWithFormat:@"%g", location.coordinate.longitude];
+    
 }
 
-#pragma mark - Segues
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"showDetail"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = self.objects[indexPath.row];
-        DetailViewController *controller = (DetailViewController *)[[segue destinationViewController] topViewController];
-        [controller setDetailItem:object];
-        controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
-        controller.navigationItem.leftItemsSupplementBackButton = YES;
-    }
+- (IBAction)resetLocation:(id)sender {
+    [self setLatAndLon];
+    [self configureRestKit];
+    [self loadVenue];
+    [self.tableView setNeedsDisplay];
 }
+
+
+
+#pragma mark - Foursquare
+- (void) configureRestKit {
+    
+    // initialize AFNetworking HTTPClient
+    NSURL *baseURL = [NSURL URLWithString:@"https://api.foursquare.com"];
+    AFHTTPClient *client = [[AFHTTPClient alloc] initWithBaseURL:baseURL];
+    
+    // initialize RestKit
+    RKObjectManager *objectManager = [[RKObjectManager alloc] initWithHTTPClient:client];
+    
+    // setup object mappings
+    RKObjectMapping *venueMapping = [RKObjectMapping mappingForClass:[Venue class]];
+    [venueMapping addAttributeMappingsFromArray:@[@"name"]];
+    
+    // register mappings with the provider using a response descriptor
+    RKResponseDescriptor *responseDescriptor =
+    [RKResponseDescriptor responseDescriptorWithMapping:venueMapping
+                                                 method:RKRequestMethodGET
+                                            pathPattern:@"/v2/venues/search"
+                                                keyPath:@"response.venues"
+                                            statusCodes:[NSIndexSet indexSetWithIndex:200]];
+    
+    [objectManager addResponseDescriptor:responseDescriptor];
+    
+}
+
+- (void) loadVenue{
+
+    NSString *latLon = [[NSString alloc] initWithFormat:@"%@,%@", latitude, longitude];
+    NSString *clientID = kCLIENTID;
+    NSString *clientSecret = kCLIENTSECRET;
+    
+    NSDictionary *queryParams = @{@"ll" : latLon,
+                                  @"client_id" : clientID,
+                                  @"client_secret" : clientSecret,
+                                  @"categoryId" : [self catagoryID],
+                                  @"v" : @"20140118"};
+    
+    [[RKObjectManager sharedManager] getObjectsAtPath:@"/v2/venues/search"
+                                           parameters:queryParams
+                                              success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+                                                  _venues = mappingResult.array;
+                                                  [self.tableView reloadData];
+                                              }
+                                              failure:^(RKObjectRequestOperation *operation, NSError *error) {
+                                                  NSLog(@"What do you mean by 'there is no coffee?': %@", error);
+                                              }];
+    
+}
+
+
 
 #pragma mark - Table View
 
@@ -68,29 +134,16 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.objects.count;
+    return [[self venues] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-    NSDate *object = self.objects[indexPath.row];
-    cell.textLabel.text = [object description];
+
+    Venue *venue = _venues[indexPath.row];
+    cell.textLabel.text = venue.name;
     return cell;
-}
-
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [self.objects removeObjectAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-    }
 }
 
 @end

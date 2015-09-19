@@ -8,8 +8,11 @@
 
 #import "AppDelegate.h"
 #import "DetailViewController.h"
+#import <RestKit/RestKit.h>
 
-@interface AppDelegate () <UISplitViewControllerDelegate>
+
+@interface AppDelegate () <UISplitViewControllerDelegate, CLLocationManagerDelegate>
+@property (nonatomic, strong) CLLocationManager *locationManager;
 
 @end
 
@@ -18,10 +21,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
-    UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
-    navigationController.topViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem;
-    splitViewController.delegate = self;
+
+    
+    [self getLocation];
+    
     return YES;
 }
 
@@ -45,6 +48,34 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - LocationManager
+
+- (CLLocationManager *) getLocation{
+    
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    
+    CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
+    
+    if (status == kCLAuthorizationStatusNotDetermined){
+        [self.locationManager requestWhenInUseAuthorization];
+        [self.locationManager startUpdatingLocation];
+        
+    }
+    /*else if (status == kCLAuthorizationStatusAuthorizedWhenInUse){
+     [self.locationManager startUpdatingLocation];
+     }*/
+    self.locationManager.desiredAccuracy=kCLLocationAccuracyNearestTenMeters;
+    [self.locationManager startUpdatingLocation];
+    [CLLocationManager locationServicesEnabled];
+    return self.locationManager;
+}
+
+-(CLLocationManager*)returnLocationManager{
+    [self getLocation];
+    return (self.locationManager)?self.locationManager:NULL;
 }
 
 #pragma mark - Split view

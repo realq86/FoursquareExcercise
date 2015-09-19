@@ -15,6 +15,13 @@
 		142A512D1BAB7AEE00DD6EE8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 142A512C1BAB7AEE00DD6EE8 /* Images.xcassets */; };
 		142A51301BAB7AEE00DD6EE8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 142A512E1BAB7AEE00DD6EE8 /* LaunchScreen.xib */; };
 		142A513C1BAB7AEF00DD6EE8 /* FoursquareExcerciseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 142A513B1BAB7AEF00DD6EE8 /* FoursquareExcerciseTests.m */; };
+		142A51471BABC52900DD6EE8 /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = 142A51461BABC52900DD6EE8 /* Venue.m */; };
+		14C4646A1BAC991B000AE35E /* btn_dinner.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 14C464691BAC991B000AE35E /* btn_dinner.pdf */; };
+		14C4646C1BACA529000AE35E /* btn_hotel.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 14C4646B1BACA529000AE35E /* btn_hotel.pdf */; };
+		14C4646E1BACA544000AE35E /* btn_gift.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 14C4646D1BACA544000AE35E /* btn_gift.pdf */; };
+		14C464701BACA56A000AE35E /* btn_play.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 14C4646F1BACA56A000AE35E /* btn_play.pdf */; };
+		14C464731BACB5F8000AE35E /* CatagoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C464721BACB5F8000AE35E /* CatagoryViewController.m */; };
+		B3685BC6A183AE19BB0E2E0F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B4958ED152D5F67ED55CE60 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +50,18 @@
 		142A51351BAB7AEF00DD6EE8 /* FoursquareExcerciseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoursquareExcerciseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		142A513A1BAB7AEF00DD6EE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		142A513B1BAB7AEF00DD6EE8 /* FoursquareExcerciseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoursquareExcerciseTests.m; sourceTree = "<group>"; };
+		142A51451BABC52900DD6EE8 /* Venue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Venue.h; sourceTree = "<group>"; };
+		142A51461BABC52900DD6EE8 /* Venue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Venue.m; sourceTree = "<group>"; };
+		14C464521BAC83BC000AE35E /* FoursquareExcercise-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FoursquareExcercise-Bridging-Header.h"; sourceTree = "<group>"; };
+		14C464691BAC991B000AE35E /* btn_dinner.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = btn_dinner.pdf; sourceTree = "<group>"; };
+		14C4646B1BACA529000AE35E /* btn_hotel.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = btn_hotel.pdf; sourceTree = "<group>"; };
+		14C4646D1BACA544000AE35E /* btn_gift.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = btn_gift.pdf; sourceTree = "<group>"; };
+		14C4646F1BACA56A000AE35E /* btn_play.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = btn_play.pdf; sourceTree = "<group>"; };
+		14C464711BACB5F8000AE35E /* CatagoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatagoryViewController.h; sourceTree = "<group>"; };
+		14C464721BACB5F8000AE35E /* CatagoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatagoryViewController.m; sourceTree = "<group>"; };
+		7CAF0A8E2D5350BFB0D7EE90 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		8B4958ED152D5F67ED55CE60 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B91126667FF032CA17CB7371 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3685BC6A183AE19BB0E2E0F /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +89,8 @@
 				142A511B1BAB7AEE00DD6EE8 /* FoursquareExcercise */,
 				142A51381BAB7AEF00DD6EE8 /* FoursquareExcerciseTests */,
 				142A511A1BAB7AEE00DD6EE8 /* Products */,
+				3836475221D9A1F87925411A /* Pods */,
+				30D5168063C609EFAE366117 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,14 +108,14 @@
 			children = (
 				142A51201BAB7AEE00DD6EE8 /* AppDelegate.h */,
 				142A51211BAB7AEE00DD6EE8 /* AppDelegate.m */,
-				142A51231BAB7AEE00DD6EE8 /* MasterViewController.h */,
-				142A51241BAB7AEE00DD6EE8 /* MasterViewController.m */,
-				142A51261BAB7AEE00DD6EE8 /* DetailViewController.h */,
-				142A51271BAB7AEE00DD6EE8 /* DetailViewController.m */,
+				14C464741BAD17AD000AE35E /* Choose Catagory */,
+				14C464751BAD17B7000AE35E /* Display Venuse */,
 				142A51291BAB7AEE00DD6EE8 /* Main.storyboard */,
 				142A512C1BAB7AEE00DD6EE8 /* Images.xcassets */,
 				142A512E1BAB7AEE00DD6EE8 /* LaunchScreen.xib */,
+				14C464571BAC89DE000AE35E /* Images */,
 				142A511C1BAB7AEE00DD6EE8 /* Supporting Files */,
+				14C464521BAC83BC000AE35E /* FoursquareExcercise-Bridging-Header.h */,
 			);
 			path = FoursquareExcercise;
 			sourceTree = "<group>";
@@ -101,6 +123,8 @@
 		142A511C1BAB7AEE00DD6EE8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				142A51261BAB7AEE00DD6EE8 /* DetailViewController.h */,
+				142A51271BAB7AEE00DD6EE8 /* DetailViewController.m */,
 				142A511D1BAB7AEE00DD6EE8 /* Info.plist */,
 				142A511E1BAB7AEE00DD6EE8 /* main.m */,
 			);
@@ -124,6 +148,54 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		14C464571BAC89DE000AE35E /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				14C4646F1BACA56A000AE35E /* btn_play.pdf */,
+				14C4646D1BACA544000AE35E /* btn_gift.pdf */,
+				14C4646B1BACA529000AE35E /* btn_hotel.pdf */,
+				14C464691BAC991B000AE35E /* btn_dinner.pdf */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		14C464741BAD17AD000AE35E /* Choose Catagory */ = {
+			isa = PBXGroup;
+			children = (
+				14C464711BACB5F8000AE35E /* CatagoryViewController.h */,
+				14C464721BACB5F8000AE35E /* CatagoryViewController.m */,
+			);
+			name = "Choose Catagory";
+			sourceTree = "<group>";
+		};
+		14C464751BAD17B7000AE35E /* Display Venuse */ = {
+			isa = PBXGroup;
+			children = (
+				142A51451BABC52900DD6EE8 /* Venue.h */,
+				142A51461BABC52900DD6EE8 /* Venue.m */,
+				142A51231BAB7AEE00DD6EE8 /* MasterViewController.h */,
+				142A51241BAB7AEE00DD6EE8 /* MasterViewController.m */,
+			);
+			name = "Display Venuse";
+			sourceTree = "<group>";
+		};
+		30D5168063C609EFAE366117 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8B4958ED152D5F67ED55CE60 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3836475221D9A1F87925411A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7CAF0A8E2D5350BFB0D7EE90 /* Pods.debug.xcconfig */,
+				B91126667FF032CA17CB7371 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -131,9 +203,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 142A513F1BAB7AEF00DD6EE8 /* Build configuration list for PBXNativeTarget "FoursquareExcercise" */;
 			buildPhases = (
+				74259717AEE5F1184395A0FE /* Check Pods Manifest.lock */,
 				142A51151BAB7AEE00DD6EE8 /* Sources */,
 				142A51161BAB7AEE00DD6EE8 /* Frameworks */,
 				142A51171BAB7AEE00DD6EE8 /* Resources */,
+				EFC2BE2BC30D8968BB96BBFC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -204,7 +278,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14C4646E1BACA544000AE35E /* btn_gift.pdf in Resources */,
+				14C4646C1BACA529000AE35E /* btn_hotel.pdf in Resources */,
+				14C4646A1BAC991B000AE35E /* btn_dinner.pdf in Resources */,
 				142A512B1BAB7AEE00DD6EE8 /* Main.storyboard in Resources */,
+				14C464701BACA56A000AE35E /* btn_play.pdf in Resources */,
 				142A51301BAB7AEE00DD6EE8 /* LaunchScreen.xib in Resources */,
 				142A512D1BAB7AEE00DD6EE8 /* Images.xcassets in Resources */,
 			);
@@ -219,6 +297,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		74259717AEE5F1184395A0FE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EFC2BE2BC30D8968BB96BBFC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		142A51151BAB7AEE00DD6EE8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -227,6 +338,8 @@
 				142A51221BAB7AEE00DD6EE8 /* AppDelegate.m in Sources */,
 				142A51251BAB7AEE00DD6EE8 /* MasterViewController.m in Sources */,
 				142A511F1BAB7AEE00DD6EE8 /* main.m in Sources */,
+				142A51471BABC52900DD6EE8 /* Venue.m in Sources */,
+				14C464731BACB5F8000AE35E /* CatagoryViewController.m in Sources */,
 				142A51281BAB7AEE00DD6EE8 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,21 +466,28 @@
 		};
 		142A51401BAB7AEF00DD6EE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CAF0A8E2D5350BFB0D7EE90 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = FoursquareExcercise/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FoursquareExcercise/FoursquareExcercise-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		142A51411BAB7AEF00DD6EE8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B91126667FF032CA17CB7371 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = FoursquareExcercise/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FoursquareExcercise/FoursquareExcercise-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -424,6 +544,7 @@
 				142A51411BAB7AEF00DD6EE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		142A51421BAB7AEF00DD6EE8 /* Build configuration list for PBXNativeTarget "FoursquareExcerciseTests" */ = {
 			isa = XCConfigurationList;
@@ -432,6 +553,7 @@
 				142A51441BAB7AEF00DD6EE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

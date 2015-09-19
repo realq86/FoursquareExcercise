@@ -7,13 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <CoreLocation/CoreLocation.h>
+#import "AppDelegate.h"
 @class DetailViewController;
 
-@interface MasterViewController : UITableViewController
+@interface MasterViewController : UITableViewController <CLLocationManagerDelegate>
 
+@property (strong, nonatomic) NSString* catagoryID;
 @property (strong, nonatomic) DetailViewController *detailViewController;
-
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *resetLocation;
 
 @end
 

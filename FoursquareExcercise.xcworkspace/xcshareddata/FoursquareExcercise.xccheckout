@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0F5DBACB-FF47-40F3-A06C-042314185625</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FoursquareExcercise</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0675E961F16FF11DD0AC28AEA04031D38B1F54B2</key>
+		<string>https://github.com/realq86/FoursquareExcercise.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>FoursquareExcercise.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0675E961F16FF11DD0AC28AEA04031D38B1F54B2</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/realq86/FoursquareExcercise.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>0675E961F16FF11DD0AC28AEA04031D38B1F54B2</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0675E961F16FF11DD0AC28AEA04031D38B1F54B2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FoursquareExcercise</string>
+		</dict>
+	</array>
+</dict>
+</plist>
