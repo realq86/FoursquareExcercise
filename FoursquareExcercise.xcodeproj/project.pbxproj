@@ -21,6 +21,9 @@
 		14C4646E1BACA544000AE35E /* btn_gift.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 14C4646D1BACA544000AE35E /* btn_gift.pdf */; };
 		14C464701BACA56A000AE35E /* btn_play.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 14C4646F1BACA56A000AE35E /* btn_play.pdf */; };
 		14C464731BACB5F8000AE35E /* CatagoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C464721BACB5F8000AE35E /* CatagoryViewController.m */; };
+		14EA5C141BAF2DF900DD8F20 /* MyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EA5C131BAF2DF900DD8F20 /* MyTableViewCell.m */; };
+		14EA5C171BAF322000DD8F20 /* Bookmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EA5C161BAF322000DD8F20 /* Bookmark.m */; };
+		14EA5C1B1BAF68DF00DD8F20 /* BookmarksTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EA5C1A1BAF68DF00DD8F20 /* BookmarksTableViewController.m */; };
 		B3685BC6A183AE19BB0E2E0F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B4958ED152D5F67ED55CE60 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +62,12 @@
 		14C4646F1BACA56A000AE35E /* btn_play.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = btn_play.pdf; sourceTree = "<group>"; };
 		14C464711BACB5F8000AE35E /* CatagoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatagoryViewController.h; sourceTree = "<group>"; };
 		14C464721BACB5F8000AE35E /* CatagoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatagoryViewController.m; sourceTree = "<group>"; };
+		14EA5C121BAF2DF900DD8F20 /* MyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewCell.h; sourceTree = "<group>"; };
+		14EA5C131BAF2DF900DD8F20 /* MyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewCell.m; sourceTree = "<group>"; };
+		14EA5C151BAF322000DD8F20 /* Bookmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bookmark.h; sourceTree = "<group>"; };
+		14EA5C161BAF322000DD8F20 /* Bookmark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bookmark.m; sourceTree = "<group>"; };
+		14EA5C191BAF68DF00DD8F20 /* BookmarksTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookmarksTableViewController.h; sourceTree = "<group>"; };
+		14EA5C1A1BAF68DF00DD8F20 /* BookmarksTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookmarksTableViewController.m; sourceTree = "<group>"; };
 		7CAF0A8E2D5350BFB0D7EE90 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		8B4958ED152D5F67ED55CE60 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B91126667FF032CA17CB7371 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -108,8 +117,10 @@
 			children = (
 				142A51201BAB7AEE00DD6EE8 /* AppDelegate.h */,
 				142A51211BAB7AEE00DD6EE8 /* AppDelegate.m */,
+				14EA5C1C1BAF68E600DD8F20 /* Bookmarks */,
 				14C464741BAD17AD000AE35E /* Choose Catagory */,
 				14C464751BAD17B7000AE35E /* Display Venuse */,
+				14EA5C181BAF322B00DD8F20 /* Bookmark */,
 				142A51291BAB7AEE00DD6EE8 /* Main.storyboard */,
 				142A512C1BAB7AEE00DD6EE8 /* Images.xcassets */,
 				142A512E1BAB7AEE00DD6EE8 /* LaunchScreen.xib */,
@@ -175,8 +186,28 @@
 				142A51461BABC52900DD6EE8 /* Venue.m */,
 				142A51231BAB7AEE00DD6EE8 /* MasterViewController.h */,
 				142A51241BAB7AEE00DD6EE8 /* MasterViewController.m */,
+				14EA5C121BAF2DF900DD8F20 /* MyTableViewCell.h */,
+				14EA5C131BAF2DF900DD8F20 /* MyTableViewCell.m */,
 			);
 			name = "Display Venuse";
+			sourceTree = "<group>";
+		};
+		14EA5C181BAF322B00DD8F20 /* Bookmark */ = {
+			isa = PBXGroup;
+			children = (
+				14EA5C151BAF322000DD8F20 /* Bookmark.h */,
+				14EA5C161BAF322000DD8F20 /* Bookmark.m */,
+			);
+			name = Bookmark;
+			sourceTree = "<group>";
+		};
+		14EA5C1C1BAF68E600DD8F20 /* Bookmarks */ = {
+			isa = PBXGroup;
+			children = (
+				14EA5C191BAF68DF00DD8F20 /* BookmarksTableViewController.h */,
+				14EA5C1A1BAF68DF00DD8F20 /* BookmarksTableViewController.m */,
+			);
+			name = Bookmarks;
 			sourceTree = "<group>";
 		};
 		30D5168063C609EFAE366117 /* Frameworks */ = {
@@ -336,7 +367,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				142A51221BAB7AEE00DD6EE8 /* AppDelegate.m in Sources */,
+				14EA5C141BAF2DF900DD8F20 /* MyTableViewCell.m in Sources */,
 				142A51251BAB7AEE00DD6EE8 /* MasterViewController.m in Sources */,
+				14EA5C1B1BAF68DF00DD8F20 /* BookmarksTableViewController.m in Sources */,
+				14EA5C171BAF322000DD8F20 /* Bookmark.m in Sources */,
 				142A511F1BAB7AEE00DD6EE8 /* main.m in Sources */,
 				142A51471BABC52900DD6EE8 /* Venue.m in Sources */,
 				14C464731BACB5F8000AE35E /* CatagoryViewController.m in Sources */,

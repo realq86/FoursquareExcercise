@@ -10,4 +10,27 @@
 
 @implementation Venue
 
+
+- (void)encodeWithCoder:(NSCoder *)aCoder{
+    
+    [aCoder encodeObject:self.name forKey:@"bookMarkName"];
+    
+}
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder{
+    
+    self = [super init];
+    
+    if(self){
+        
+        _name = [aDecoder decodeObjectForKey:@"bookMarkName"];
+        
+    }
+    
+    return self;
+    
+}
+
+
+
 @end

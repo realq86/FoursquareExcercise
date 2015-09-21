@@ -10,11 +10,14 @@
 #import "DetailViewController.h"
 #import <RestKit/RestKit.h>
 #import "Venue.h"
+#import "MyTableViewCell.h"
+
 #define kCLIENTID @"IAMG115USX1ZA52JFAQ2VWZQHC4FL532PPPN2PZRY4EJDTBJ"
 #define kCLIENTSECRET @"QYQSOIZG0KVAKVMS3O1LZGJ1A5JWGTM5YZYYKZOWKQ2A4MTM"
 @interface MasterViewController (){
     NSString *latitude;
     NSString *longitude;
+    Bookmark *bookmarks;
 }
 
 @property NSMutableArray *objects;
@@ -26,10 +29,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    /*if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        self.clearsSelectionOnViewWillAppear = NO;
-        self.preferredContentSize = CGSizeMake(320.0, 600.0);
-    }*/
+
 }
 
 - (void)viewDidLoad {
@@ -39,9 +39,9 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     
+    bookmarks = [[Bookmark alloc] initBookmarks];
+    
     AppDelegate *appDelegate = (AppDelegate*) [[UIApplication sharedApplication] delegate];
-    
-    
     self.locationManager = [appDelegate returnLocationManager];
     [self setLatAndLon];
     [self configureRestKit];
@@ -50,6 +50,11 @@
 
 }
 
+- (void)viewWillDisappear:(BOOL)animated{
+    
+    [bookmarks saveBookmarks];
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -130,20 +135,68 @@
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [[self venues] count];
+    
+    if(section == 0)
+        return [bookmarks size];
+    
+    else if(section ==1)
+        return [[self venues] count];
+    
+    return 0;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    
+    UITableViewCell *headerCell = [tableView dequeueReusableCellWithIdentifier:@"HeaderCell"];
+    
+    if(section ==0)
+        headerCell.textLabel.text = @"BOOKMARKS";
+    
+    else if(section ==1){
+        headerCell.textLabel.text = @"LOCATIONS";
+    }
+    return headerCell;
+    
+}
 
-
-    Venue *venue = _venues[indexPath.row];
-    cell.textLabel.text = venue.name;
+- (MyTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    MyTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    
+    Venue *venue;
+    if (indexPath.section == 0) {
+        
+        venue = bookmarks.bookmarks[indexPath.row];
+    }
+    
+    if(indexPath.section==1){
+        cell.likeButton.tag = indexPath.row;
+        [cell.likeButton addTarget:self action:@selector(likeButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    
+        venue = _venues[indexPath.row];
+    }
+    
+    cell.name.text = venue.name;
+    
     return cell;
+}
+
+
+
+- (void)likeButtonClicked:(UIButton *)sender{
+    int buttonIndex = sender.tag;
+    Venue *venue = self.venues[buttonIndex];
+    
+    BOOL newBookmark = [bookmarks saveVenue:venue];
+    
+    if(newBookmark == YES){
+        UIAlertView *bookmarkAlert = [[UIAlertView alloc] initWithTitle:@"Location added to bookmark!" message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:nil];
+        [bookmarkAlert show];
+        [bookmarkAlert dismissWithClickedButtonIndex:0 animated:YES];
+    }
 }
 
 @end

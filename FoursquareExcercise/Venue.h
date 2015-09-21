@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Venue : NSObject
+@interface Venue : NSObject <NSCoding>
 
 @property (nonatomic, strong) NSString *name;
 
