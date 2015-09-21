@@ -78,20 +78,30 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="X2r-WN-tjU" id="Jgb-CU-NJC">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0n-Hp-hXT" userLabel="Like">
-                                            <rect key="frame" x="537" y="35" width="30" height="30"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0n-Hp-hXT" userLabel="Like">
+                                            <rect key="frame" x="537" y="30" width="30" height="30"/>
                                             <color key="backgroundColor" red="0.80000000000000004" green="0.55326796767127051" blue="0.60864487105128739" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="30" id="GiV-3d-BhB"/>
+                                            </constraints>
                                             <size key="titleShadowOffset" width="1" height="2"/>
                                             <state key="normal" title="Like">
                                                 <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="GiV-3d-BhB"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="widthClass=compact">
+                                                <mask key="constraints">
+                                                    <include reference="GiV-3d-BhB"/>
+                                                </mask>
+                                            </variation>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5a-9v-ID0">
-                                            <rect key="frame" x="43" y="39" width="410" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="250" id="YZo-ba-9M6"/>
-                                            </constraints>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5a-9v-ID0">
+                                            <rect key="frame" x="43" y="35" width="250" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -101,8 +111,19 @@
                                         <constraint firstAttribute="centerY" secondItem="N0n-Hp-hXT" secondAttribute="centerY" id="6rw-Ku-tXQ"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="N0n-Hp-hXT" secondAttribute="trailing" constant="25" id="KP5-Tl-XUc"/>
                                         <constraint firstItem="s5a-9v-ID0" firstAttribute="leading" secondItem="Jgb-CU-NJC" secondAttribute="leadingMargin" constant="35" id="P3p-vx-1hz"/>
+                                        <constraint firstItem="N0n-Hp-hXT" firstAttribute="leading" secondItem="s5a-9v-ID0" secondAttribute="trailing" constant="40" id="aBf-SJ-dJ2"/>
                                         <constraint firstAttribute="centerY" secondItem="s5a-9v-ID0" secondAttribute="centerY" id="w6Q-ki-rTE"/>
                                     </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="aBf-SJ-dJ2"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="widthClass=compact">
+                                        <mask key="constraints">
+                                            <include reference="aBf-SJ-dJ2"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="likeButton" destination="N0n-Hp-hXT" id="pN3-D6-3LN"/>
@@ -136,7 +157,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1433" y="-624"/>
+            <point key="canvasLocation" x="1432.5" y="-624"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CwO-cn-FXK">
