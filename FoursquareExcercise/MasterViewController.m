@@ -197,6 +197,9 @@
         [bookmarkAlert show];
         [bookmarkAlert dismissWithClickedButtonIndex:0 animated:YES];
     }
+    [self.tableView reloadData];
+    [self.tableView setNeedsDisplay];
+
 }
 
 @end

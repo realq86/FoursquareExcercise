@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FoursquareExcercise/MasterViewController.m"
-            timestampString = "464500491.839642"
+            timestampString = "464638200.625528"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "200"
-            endingLineNumber = "200"
+            startingLineNumber = "203"
+            endingLineNumber = "203"
             landmarkName = "-likeButtonClicked:"
             landmarkType = "5">
          </BreakpointContent>
