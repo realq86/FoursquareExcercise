@@ -21,6 +21,7 @@
 		14C4646E1BACA544000AE35E /* btn_gift.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 14C4646D1BACA544000AE35E /* btn_gift.pdf */; };
 		14C464701BACA56A000AE35E /* btn_play.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 14C4646F1BACA56A000AE35E /* btn_play.pdf */; };
 		14C464731BACB5F8000AE35E /* CatagoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C464721BACB5F8000AE35E /* CatagoryViewController.m */; };
+		14D5EC311BBE4681000B775C /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D5EC301BBE4681000B775C /* Photo.m */; };
 		14EA5C141BAF2DF900DD8F20 /* MyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EA5C131BAF2DF900DD8F20 /* MyTableViewCell.m */; };
 		14EA5C171BAF322000DD8F20 /* Bookmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EA5C161BAF322000DD8F20 /* Bookmark.m */; };
 		14EA5C1B1BAF68DF00DD8F20 /* BookmarksTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EA5C1A1BAF68DF00DD8F20 /* BookmarksTableViewController.m */; };
@@ -62,6 +63,8 @@
 		14C4646F1BACA56A000AE35E /* btn_play.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = btn_play.pdf; sourceTree = "<group>"; };
 		14C464711BACB5F8000AE35E /* CatagoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatagoryViewController.h; sourceTree = "<group>"; };
 		14C464721BACB5F8000AE35E /* CatagoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatagoryViewController.m; sourceTree = "<group>"; };
+		14D5EC2F1BBE4681000B775C /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		14D5EC301BBE4681000B775C /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
 		14EA5C121BAF2DF900DD8F20 /* MyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewCell.h; sourceTree = "<group>"; };
 		14EA5C131BAF2DF900DD8F20 /* MyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewCell.m; sourceTree = "<group>"; };
 		14EA5C151BAF322000DD8F20 /* Bookmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bookmark.h; sourceTree = "<group>"; };
@@ -182,6 +185,8 @@
 		14C464751BAD17B7000AE35E /* Display Venuse */ = {
 			isa = PBXGroup;
 			children = (
+				14D5EC2F1BBE4681000B775C /* Photo.h */,
+				14D5EC301BBE4681000B775C /* Photo.m */,
 				142A51451BABC52900DD6EE8 /* Venue.h */,
 				142A51461BABC52900DD6EE8 /* Venue.m */,
 				142A51231BAB7AEE00DD6EE8 /* MasterViewController.h */,
@@ -374,6 +379,7 @@
 				142A511F1BAB7AEE00DD6EE8 /* main.m in Sources */,
 				142A51471BABC52900DD6EE8 /* Venue.m in Sources */,
 				14C464731BACB5F8000AE35E /* CatagoryViewController.m in Sources */,
+				14D5EC311BBE4681000B775C /* Photo.m in Sources */,
 				142A51281BAB7AEE00DD6EE8 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

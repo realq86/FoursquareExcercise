@@ -10,10 +10,13 @@
 #import "DetailViewController.h"
 #import <RestKit/RestKit.h>
 #import "Venue.h"
+#import "Photo.h"
 #import "MyTableViewCell.h"
 
 #define kCLIENTID @"IAMG115USX1ZA52JFAQ2VWZQHC4FL532PPPN2PZRY4EJDTBJ"
 #define kCLIENTSECRET @"QYQSOIZG0KVAKVMS3O1LZGJ1A5JWGTM5YZYYKZOWKQ2A4MTM"
+
+
 @interface MasterViewController (){
     NSString *latitude;
     NSString *longitude;
@@ -23,6 +26,8 @@
 @property NSMutableArray *objects;
 @property (nonatomic, strong) NSMutableArray *venues;
 @property (nonatomic, strong) CLLocationManager *locationManager;
+@property (nonatomic, strong) NSMutableArray *photos;
+
 @end
 
 @implementation MasterViewController
@@ -128,6 +133,7 @@
                                                   NSLog(@"What do you mean by 'there is no coffee?': %@", error);
                                               }];
     
+    
 }
 
 
@@ -144,7 +150,7 @@
         return [bookmarks size];
     
     else if(section ==1)
-        return [[self venues] count];
+        return [[self photos] count];
     
     return 0;
 }
@@ -165,7 +171,7 @@
 
 - (MyTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     MyTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    
+    /*
     Venue *venue;
     if (indexPath.section == 0) {
         
@@ -179,7 +185,20 @@
         venue = _venues[indexPath.row];
     }
     
-    cell.name.text = venue.name;
+    cell.name.text = venue.name;*/
+    
+
+    Photo *photo;
+    if(indexPath.section==1){
+        cell.likeButton.tag = indexPath.row;
+        [cell.likeButton addTarget:self action:@selector(likeButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+        
+        photo = self.photos[indexPath.row];
+    }
+    
+    cell.name.text = photo.title;
+    
+    NSLog(@"photo.title is =  %@", photo.title.description);
     
     return cell;
 }
