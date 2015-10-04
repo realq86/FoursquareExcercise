@@ -58,13 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FoursquareExcercise/MasterViewController.m"
-            timestampString = "465502778.336065"
+            timestampString = "465673194.964029"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "266"
-            endingLineNumber = "266"
-            landmarkName = "-likeButtonClicked:"
-            landmarkType = "5">
+            startingLineNumber = "256"
+            endingLineNumber = "256">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -74,13 +72,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FoursquareExcercise/MasterViewController.m"
-            timestampString = "465502778.336065"
+            timestampString = "465673194.964029"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "252"
-            endingLineNumber = "252"
-            landmarkName = "-likeButtonClicked:"
-            landmarkType = "5">
+            startingLineNumber = "242"
+            endingLineNumber = "242">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -90,13 +86,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FoursquareExcercise/MasterViewController.m"
-            timestampString = "465502778.336065"
+            timestampString = "465673194.964029"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "254"
-            endingLineNumber = "254"
-            landmarkName = "-likeButtonClicked:"
-            landmarkType = "5">
+            startingLineNumber = "244"
+            endingLineNumber = "244">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -122,13 +116,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FoursquareExcercise/MasterViewController.m"
-            timestampString = "465502778.336065"
+            timestampString = "465673194.964029"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "257"
-            endingLineNumber = "257"
-            landmarkName = "-likeButtonClicked:"
-            landmarkType = "5">
+            startingLineNumber = "247"
+            endingLineNumber = "247">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

@@ -150,7 +150,7 @@
         return [bookmarks size];
     
     else if(section ==1)
-        return [[self photos] count];
+        return [[self venues] count];
     
     return 0;
 }
@@ -171,7 +171,7 @@
 
 - (MyTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     MyTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    /*
+    
     Venue *venue;
     if (indexPath.section == 0) {
         
@@ -185,20 +185,10 @@
         venue = _venues[indexPath.row];
     }
     
-    cell.name.text = venue.name;*/
+    cell.name.text = venue.name;
     
 
-    Photo *photo;
-    if(indexPath.section==1){
-        cell.likeButton.tag = indexPath.row;
-        [cell.likeButton addTarget:self action:@selector(likeButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
-        
-        photo = self.photos[indexPath.row];
-    }
     
-    cell.name.text = photo.title;
-    
-    NSLog(@"photo.title is =  %@", photo.title.description);
     
     return cell;
 }
